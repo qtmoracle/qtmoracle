@@ -1,9 +1,9 @@
-## Hi there 👋
 # QTM Oracle
+Most businesses don’t have a lead problem. They have a system problem.
 
 Live site: https://qtmoracle.com
 
-System-first growth infrastructure for operators.
+System-first infrastructure for operators who rely on booked work.
 
 ---
 
