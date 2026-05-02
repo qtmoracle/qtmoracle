@@ -15,9 +15,25 @@
         <img src="./assets/logo.png" alt="QTM Oracle" class="brand-logo" />
       </a>
       <nav class="header-nav">
-        <a href="./" class="nav-link">Home</a>
-        <a href="./blog.html" class="nav-link">Insights</a>
-        <a href="./#booking" class="btn-nav">Book a Demo</a>
+        <a href="https://xenstrategy.com" class="nav-link" style="opacity:0.45;">Xenstrategy</a>
+        <a href="https://app.qtmoracle.com" class="nav-link">Oracle</a>
+        <a href="https://planck.qtmoracle.com" class="nav-link">Planck</a>
+        <a href="https://app.qtmoracle.com/automation" class="nav-link">Automation</a>
+        <a href="./blog.html" class="nav-link">Blog</a>
+        <a href="https://wiki.qtmoracle.com" class="nav-link">Wiki</a>
+        <span class="nav-omni">Omni</span>
+        <div class="nav-menu-wrap nav-menu-mobile-only">
+          <button class="nav-menu-btn" aria-label="Menu" aria-expanded="false">&#9776;</button>
+          <div class="nav-dropdown" id="navDropdown">
+            <a href="https://xenstrategy.com" class="nav-dropdown-item" style="opacity:0.6;">Xenstrategy</a>
+            <a href="https://app.qtmoracle.com" class="nav-dropdown-item">Oracle</a>
+            <a href="https://planck.qtmoracle.com" class="nav-dropdown-item">Planck</a>
+            <a href="https://app.qtmoracle.com/automation" class="nav-dropdown-item">Automation</a>
+            <a href="./blog.html" class="nav-dropdown-item">Blog</a>
+            <a href="https://wiki.qtmoracle.com" class="nav-dropdown-item">Wiki</a>
+            <span class="nav-dropdown-item" style="opacity:0.3;cursor:default;pointer-events:none;">Omni</span>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -69,5 +85,21 @@
     </div>
   </footer>
 
+  <script>
+    var btn = document.querySelector('.nav-menu-btn');
+    var dropdown = document.getElementById('navDropdown');
+    if (btn && dropdown) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var open = dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    }
+  </script>
 </body>
 </html>

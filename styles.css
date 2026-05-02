@@ -921,3 +921,115 @@ p {
     gap: 24px;
   }
 }
+
+/* ============================================
+   HAMBURGER MENU
+   ============================================ */
+.nav-omni {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #3D5166;
+  padding: 8px 12px;
+}
+
+.nav-menu-wrap {
+  position: relative;
+}
+
+.nav-menu-btn {
+  background: none;
+  border: 1px solid #D9E1E8;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #3D5166;
+  margin-left: 8px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  line-height: 1;
+}
+
+.nav-menu-btn:hover {
+  border-color: #B0BEC8;
+  background-color: #F0F4F8;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #FFFFFF;
+  border: 1px solid #D9E1E8;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(13, 27, 42, 0.13);
+  padding: 6px;
+  min-width: 160px;
+  z-index: 200;
+}
+
+.nav-dropdown.open {
+  display: block;
+}
+
+.nav-dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.88rem;
+  color: #3D5166;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.nav-dropdown-item:hover {
+  background-color: #F0F4F8;
+  color: #0D1B2A;
+}
+
+.nav-dropdown-cta {
+  margin-top: 4px;
+  background-color: #0D1B2A;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  text-align: center;
+}
+
+.nav-dropdown-cta:hover {
+  background-color: #1a2f44 !important;
+}
+
+/* Eco section in dropdown — mobile only */
+.nav-dropdown-eco { display: none; }
+
+.nav-dropdown-divider {
+  display: none;
+  border: none;
+  border-top: 1px solid #D9E1E8;
+  margin: 6px 4px;
+}
+
+.nav-dropdown-sec-label {
+  display: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7A94A8;
+  padding: 4px 12px 2px;
+  margin: 0;
+}
+
+/* Blog mobile hamburger — hidden on desktop */
+.nav-menu-mobile-only { display: none; }
+
+@media (max-width: 639px) {
+  .btn-nav { display: none !important; }
+  .nav-dropdown-eco { display: block; }
+  .nav-dropdown-divider { display: block; }
+  .nav-dropdown-sec-label { display: block; }
+  .nav-menu-mobile-only { display: block !important; }
+}
